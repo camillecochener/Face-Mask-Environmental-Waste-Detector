@@ -15,5 +15,3 @@ My goal is to collect 1000 images.
 If you wish to contribute to this project and strengthen the detection system, please feel free to capture images on your side and send them to me by email: cochenercamille@yahoo.fr !
 
 ## 2 - Approach 
-
-Translated with www.DeepL.com/Translator (free version)
