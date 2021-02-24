@@ -1,1 +1,17 @@
-data/img
+# Data
+data/*.JPG
+data/*.jpeg
+dataset
+
+# Visual Studio Code
+.vscode
+
+# Byte-compiled / optimized / DLL files
+maskrcnn/__pycache__
+
+# virtualenv
+.venv 
+venv/
+
+# draft notebooks
+inspect_annotations.ipynb
