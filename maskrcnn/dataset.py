@@ -181,12 +181,12 @@ def train(model):
     """Train the model."""
     # Training dataset.
     dataset_train = DispMaskDataset()
-    dataset_train.load_dataset(args.dataset, "train")
+    dataset_train.load_dispmask(args.dataset, "train")
     dataset_train.prepare()
 
     # Validation dataset
     dataset_val = DispMaskDataset()
-    dataset_val.load_dataset(args.dataset, "val")
+    dataset_val.load_dispmask(args.dataset, "val")
     dataset_val.prepare()
 
     # *** This training schedule is an example. Update to your needs ***
