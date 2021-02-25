@@ -30,6 +30,9 @@ To perform instance segmentation on this dataset, I've decided to use the <a src
 
 I've used the <a src="https://github.com/matterport/Mask_RCNN">Matterport implementation of Mask-RCNN</a> to build my detector, which use Python 3, Keras and TensorFlow, and adapted it to my needs. 
 
+- Tensorflow 1.14
+- Keras 2.1.5
+
 **Steps I followed**
 
 - Clone and adapt the Matterport Mask-RCNN repository to my needs
