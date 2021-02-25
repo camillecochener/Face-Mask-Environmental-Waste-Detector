@@ -90,7 +90,7 @@ class DispMaskDataset(utils.Dataset):
         self.add_class("disposable_mask", 1, "disposable_mask")
 
         # Train or validation dataset?
-        assert subset in ["train", "val"]
+        assert subset in ["train", "val", "test"]
         dataset_dir = os.path.join(dataset_dir, subset)
 
         # Load annotations
