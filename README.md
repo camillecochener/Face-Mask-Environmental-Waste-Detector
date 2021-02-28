@@ -39,21 +39,31 @@ In my repository, I cloned and named the <a href="https://github.com/matterport/
 - **Environment**
 
 In my repository, I created a virtual environment with the following command :  
-`virtualenv -p /Users/camillecochener/.pyenv/versions/3.7.0/bin/python3 venv`
+```
+virtualenv -p /Users/camillecochener/.pyenv/versions/3.7.0/bin/python3 venv
+```
 
 Don't forget to activate it using :  
-`source venv/bin/activate`
+```
+source venv/bin/activate
+```
 
 Then, I installed the required libraries :  
-`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
 - **Dataset**  
 
 Images can be downloaded from LabelBox thanks to the **download.py** script I wrote :  
-`python download.py data/annotations.json`   
+```
+python download.py data/annotations.json
+```   
 
 Then, the dataset can be split intro three folder train/val/test the script **split_train_val_test.py** :  
-`python split_train_val_test.py data`
+```
+python split_train_val_test.py data
+```
 
 - **Inspect Data**
 
@@ -82,3 +92,4 @@ To test the model, I simply used the **inspect_model.ipynb** notebook.
 - Compute performance metrics
 - Generate a detection video with the mask 
 - Adapt the demo.ipynb notebook to my use case
+- Enlarge the annotations on the anchor boxes 
