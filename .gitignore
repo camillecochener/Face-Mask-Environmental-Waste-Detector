@@ -15,3 +15,14 @@ venv/
 
 # draft notebooks
 inspect_annotations.ipynb
+
+# assets
+assets/detections_20210228T182204.avi
+assets/detection1.png
+assets/detection2.png
+assets/detection3.png
+assets/detection4.png
+assets/detection5.png
+
+# Models
+logs

@@ -5,6 +5,7 @@ Train on the toy Balloon dataset and implement color splash effect.
 Copyright (c) 2018 Matterport, Inc.
 Licensed under the MIT License (see LICENSE for details)
 Written by Waleed Abdulla
+Adapted by Camille COCHENER when using annotations from LabelBox
 
 ------------------------------------------------------------
 
@@ -94,25 +95,8 @@ class DispMaskDataset(utils.Dataset):
         dataset_dir = os.path.join(dataset_dir, subset)
 
         # Load annotations
-        # VGG Image Annotator (up to version 1.6) saves each image in the form:
-        # { 'filename': '28503151_5b5b7ec140_b.jpg', # External ID in LabelBox
-        #   'regions': { # polygon in the Label object in LabelBox
-        #       '0': {
-        #           'region_attributes': {},
-        #           'shape_attributes': {
-        #               'all_points_x': [...],
-        #               'all_points_y': [...],
-        #               'name': 'polygon'}},
-        #       ... more regions ...
-        #   },
-        #   'size': 100202
-        # }
         # We mostly care about the x and y coordinates of each region
         annotations = json.load(open(os.path.join(dataset_dir, "annotations.json")))
-
-        # The LabelBox tool saves images in the JSON even if they don't have any
-        # annotations, and named them as 'Skip'. Skip unannotated images.
-        #annotations = [a for a in annotations if a['Label']]
 
         # Add images
         for a in annotations:
@@ -245,7 +229,7 @@ def detect_and_color_splash(model, image_path=None, video_path=None):
         fps = vcapture.get(cv2.CAP_PROP_FPS)
 
         # Define codec and create video writer
-        file_name = "splash_{:%Y%m%dT%H%M%S}.avi".format(datetime.datetime.now())
+        file_name = "detections_{:%Y%m%dT%H%M%S}.avi".format(datetime.datetime.now())
         vwriter = cv2.VideoWriter(file_name,
                                   cv2.VideoWriter_fourcc(*'MJPG'),
                                   fps, (width, height))

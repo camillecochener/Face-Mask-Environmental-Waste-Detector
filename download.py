@@ -12,18 +12,14 @@ from io import BytesIO
 
 
 def parse_arguments():
-    """
-    Function to parse the arguments given in the command line
-    """
+    """Function to parse the arguments given in the command line"""
     parser = argparse.ArgumentParser()
     parser.add_argument('annotations_path', help='Path to the annotations json file')
     return parser.parse_args()
 
 
 def download_images(args):
-    """
-    Function that reads the annotations json file
-    """
+    """Function that reads the annotations json file"""
 
     dir_annotations = os.path.dirname(args.annotations_path)
 

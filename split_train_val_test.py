@@ -16,18 +16,14 @@ from io import BytesIO
 
 
 def parse_arguments():
-    """
-    Function to parse the arguments given in the command line
-    """
+    """Function to parse the arguments given in the command line"""
     parser = argparse.ArgumentParser()
     parser.add_argument('dataset_folder', help='Path to the raw dataset folder')
     return parser.parse_args()
 
 
 def split_dataset(args):
-    """
-    Function to read the annotations and to get the number of images for each part
-    """
+    """Function to read the annotations and to get the number of images for each part"""
     path_to_annnotations = os.path.join(args.dataset_folder, 'annotations.json')
     
     with open(path_to_annnotations, 'r') as f:
@@ -64,9 +60,7 @@ def split_dataset(args):
 
 
 def get_images(train, validate, test):
-    """
-    Function to download the images for each part of the dataset
-    """
+    """Function to download the images for each part of the dataset"""
     n_images = [len(train), len(validate), len(test)]
     list_folder = ["train", "val", "test"]
     subset = [train, validate, test]
@@ -92,6 +86,7 @@ def main():
     train, validate, test = split_dataset(args)
     # Download images
     get_images(train, validate, test)
+
 
 if __name__ == '__main__':
     main()
