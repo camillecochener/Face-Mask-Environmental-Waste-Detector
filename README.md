@@ -1,4 +1,4 @@
-<div align='center'><h1>Disposable Mask Segmentation</h1></div>
+<div align='center'><h1>Disposable Mask Segmentation</h1> 😷 </div>
 
 Following the coronavirus crisis, many disposable masks are found in the outdoor environment: in the street, in nature. This crisis brings a new type of waste to the environment. In order to complete the research in waste detection in the natural environment, I have decided to build a detection system capable of identifying and segmenting these masks. 
 
