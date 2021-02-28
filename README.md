@@ -24,7 +24,7 @@ The data are annotated and reviewed with <a href="https://labelbox.com/">LabelBo
   
 ## 2 - Approach 
 
-- ### Instance segmentation with Mask-RCNN
+### Instance segmentation with Mask-RCNN
   
 To perform instance segmentation on this dataset, I've decided to use the <a href="https://arxiv.org/abs/1703.06870">Mask-RCNN architecture</a> by Kaiming He et al. from Facebook AI Research (FAIR) in 2017. Mask-RCNN is moslty based on Faster-RCNN, which is a two stage detector composed of a region-proposal network, followed by two branches predicting the class and the box offset for each proposed region. The authors extended Faster-RCNN with a *third parallel branch*, outputting a binary mask for the element in each region. Mask-RCNN distinguished itself at the COCO 2017 challenges and is widely used nowadays.  
 
