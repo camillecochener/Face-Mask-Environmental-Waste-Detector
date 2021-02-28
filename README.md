@@ -3,7 +3,7 @@
 Following the coronavirus crisis, many disposable masks are found in the outdoor environment: in the street, in nature. This crisis brings a new type of waste to the environment. In order to complete the research in waste detection in the natural environment, I have decided to build a detection system capable of identifying and segmenting these masks. 
 
 <p align="center">
-  <img src="assets/detections_mask.png" width="500" title="Predictions">
+  <img src="assets/detections_mask.png" width="800" title="Predictions">
 </p>
 
 This type of detector could be of interest for building automated systems for collecting waste in the streets for example. 
@@ -73,7 +73,7 @@ To test the model, I simply used the **inspect_model.ipynb** notebook.
 **Note** : The color splash effect aims to have the detected object on a black and white background. 
 
 <p align="center">
-  <img src="assets/detections_20210228T182204.gif" width="500" title="Predictions">
+  <img src="assets/detections_20210228T182204.gif" width="600" title="Predictions">
 </p>
 
 **Next steps**
