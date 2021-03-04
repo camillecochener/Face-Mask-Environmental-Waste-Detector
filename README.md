@@ -14,8 +14,6 @@ This type of detector could be of interest for building automated systems for co
 
 For this purpose, 65 images of masks found outdoors were used. For the moment, this dataset is small because I started the project at the beginning of 2021. Nevertheless, my relatives and I are collecting new ones every day in order to complete this dataset. 
 
-My goal is to collect 1000 images. 
-
 If you wish to contribute to this project and strengthen the detection system, please feel free to capture images on your side and send them to me by email: cochenercamille@yahoo.fr !
 
 - **Annotation**
@@ -83,7 +81,7 @@ To test the model, I simply used the **inspect_model.ipynb** notebook.
 **Note** : The color splash effect aims to have the detected object on a black and white background. 
 
 <p align="center">
-  <img src="assets/detections_20210228T182204.gif" width="600" title="Predictions">
+  <img src="assets/gif2" width="600" title="Predictions">
 </p>
 
 **Next steps**

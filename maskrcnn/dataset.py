@@ -241,16 +241,14 @@ def detect_and_color_splash(model, image_path=None, video_path=None):
             # Read next image
             success, image = vcapture.read()
             if success:
-                # OpenCV returns images as BGR, convert to RGB
-                image = image[..., ::-1]
-                # Detect objects
-                r = model.detect([image], verbose=0)[0]
-                # Color splash
-                splash = color_splash(image, r['masks'])
-                # RGB -> BGR to save image to video
-                splash = splash[..., ::-1]
-                # Add image to video writer
-                vwriter.write(splash)
+                # Add the mask on the image
+                r = model.detect([image], verbose=0)
+                
+                result = visualize.display_mask_label(image, boxes=r['rois'], masks=r['masks'], class_ids=r['class_ids'], \
+                                class_names=test.class_names, scores=r['scores'], show_mask=True, show_bbox=True, \
+                                colors=None, captions=None)
+
+                vwriter.write(result)
                 count += 1
         vwriter.release()
     print("Saved to ", file_name)
