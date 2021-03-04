@@ -78,8 +78,6 @@ To test the model, I simply used the **inspect_model.ipynb** notebook.
 
 - **Demo**  
 
-**Note** : The color splash effect aims to have the detected object on a black and white background. 
-
 <p align="center">
   <img src="assets/gif2.gif" width="600" title="Predictions">
 </p>
