@@ -14,8 +14,6 @@ This type of detector could be of interest for building automated systems for co
 
 For this purpose, 65 images of masks found outdoors were used. For the moment, this dataset is small because I started the project at the beginning of 2021. Nevertheless, my relatives and I are collecting new ones every day in order to complete this dataset. 
 
-If you wish to contribute to this project and strengthen the detection system, please feel free to capture images on your side and send them to me by email: cochenercamille@yahoo.fr !
-
 - **Annotation**
 
 The data are annotated and reviewed with <a href="https://labelbox.com/">LabelBox</a> but many other platforms exist. A JSON file is exported and put into the `data/` folder of the repository. 
